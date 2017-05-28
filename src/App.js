@@ -1,10 +1,11 @@
 import React from 'react'
 import './App.css'
 import 'semantic-ui-css/semantic.min.css'
-import { Container, Header, Card } from 'semantic-ui-react'
+import { Container, Header, Card, Image } from 'semantic-ui-react'
 import workshop1 from './showcase/workshop-01'
 import { ApolloClient, createNetworkInterface, ApolloProvider } from 'react-apollo'
 import Showcase from './Showcase'
+import devcLogo from './devc-logo.png'
 
 const token = process.env.REACT_APP_GITHUB_TOKEN
 
@@ -41,6 +42,7 @@ class App extends React.Component {
       <ApolloProvider client={client}>
         <Container fluid style={{ padding: '20px' }}>
           <Header as='h2' icon textAlign='center' style={{ marginTop: '30px' }}>
+            <Image src={devcLogo} style={{ width: '700px', right: '-100px' }} />
             <Header.Content>
               Workshop Showcase
             </Header.Content>
