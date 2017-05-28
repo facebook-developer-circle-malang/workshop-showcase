@@ -7,5 +7,6 @@ export default {
     { github: '99ridho/react-native-belajar-hijaiyah' },
     { github: 'reyhansofian/expo-swapi-graphql' },
     { github: 'ekapasha17/learn-react' },
+    { github: 'tituschristian/Todo-rn' },
   ],
 }
