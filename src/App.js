@@ -29,7 +29,10 @@ class App extends React.Component {
           </Header.Content>
         </Header>
         <Card.Group style={{ display: 'flex', justifyContent: 'center' }}>
-          {workshop1.showcases.map(show => <Showcase {...show} />)}
+          {workshop1.showcases
+            .sort((a, b) => a.github.split('/')[1].toUpperCase() > b.github.split('/')[1].toUpperCase())
+            .map(show => <Showcase {...show} />)
+          }
         </Card.Group>
       </div>
     )
@@ -39,6 +42,7 @@ class App extends React.Component {
         <Container fluid style={{ padding: '20px' }}>
           <Header as='h2' icon textAlign='center' style={{ marginTop: '30px' }}>
             <Header.Content>
+              Facebook Developer Circles Malang<br />
               Workshop Showcase
             </Header.Content>
           </Header>
