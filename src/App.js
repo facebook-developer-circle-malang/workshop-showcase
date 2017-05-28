@@ -42,7 +42,6 @@ class App extends React.Component {
         <Container fluid style={{ padding: '20px' }}>
           <Header as='h2' icon textAlign='center' style={{ marginTop: '30px' }}>
             <Header.Content>
-              Facebook Developer Circles Malang<br />
               Workshop Showcase
             </Header.Content>
           </Header>
