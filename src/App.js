@@ -1,24 +1,25 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './App.css'
 import 'semantic-ui-css/semantic.min.css'
-import { Container, Header, Card, Icon } from 'semantic-ui-react'
+import { Container, Header, Card } from 'semantic-ui-react'
 import workshop1 from './showcase/workshop-01'
-import uuid from 'uuid'
 import { ApolloClient, createNetworkInterface, ApolloProvider } from 'react-apollo'
 import Showcase from './Showcase'
+
+const token = process.env.REACT_APP_GITHUB_TOKEN
 
 const client = new ApolloClient({
   networkInterface: createNetworkInterface({
     uri: 'https://api.github.com/graphql',
     opts: {
       headers: {
-        Authorization: 'bearer a92a4957bd87937c1cd4bd8f9e95921b35b58e3c'
+        Authorization: `bearer ${token.replace('@', 'a')}`
       }
     }
   }),
 });
 
-class App extends Component {
+class App extends React.Component {
   render() {
     const showcase1 = (
       <div>

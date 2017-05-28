@@ -1,22 +1,36 @@
 import React from 'react'
-import { Container, Header, Card, Icon, Image, Button } from 'semantic-ui-react'
+import { Card, Image, Button } from 'semantic-ui-react'
 import { gql, graphql } from 'react-apollo'
 import uuid from 'uuid'
 import moment from 'moment-timezone'
+import ContentLoader, { Rect } from 'react-content-loader'
+import imgPlaceholder from './image-placeholder.png'
 
 class Showcase extends React.Component {
 
   render() {
     const { data } = this.props
 
-    if (!data.repository) return <div>"Sabar woi"</div>
+    if (!data.repository) {
+      return (
+        <Card key={uuid.v4()}>
+          <Image fluid src={imgPlaceholder} />
+          <Card.Content>  
+            <ContentLoader>
+              <Rect x={20} y={80} height={10} radius={5} width={300} />
+              <Rect x={20} y={100} height={10} radius={5} width={250} />
+            </ContentLoader>
+          </Card.Content>
+        </Card>
+      )
+    }
 
     return (
       <Card key={uuid.v4()}>
         <Image fluid src={data.repository.owner.avatarUrl} />
         <Card.Content>  
           <Card.Header>
-            <a href={data.repository.url} target="_blank">{data.repository.name}</a>
+            <a href={data.repository.url} target="_blank" rel="noopener noreferrer">{data.repository.name}</a>
           </Card.Header>
           <Card.Meta>
             <span className="date">
