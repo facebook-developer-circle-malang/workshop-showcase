@@ -10,5 +10,6 @@ export default {
     { github: 'tituschristian/Todo-rn' },
     { github: 'yahyasahaja/rn-todo' },
     { github: 'rezzafr33/rn-expo' },
+    { github: 'vjivandro/rn-expo' },
   ],
 }
