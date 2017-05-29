@@ -9,5 +9,6 @@ export default {
     { github: 'ekapasha17/learn-react' },
     { github: 'tituschristian/Todo-rn' },
     { github: 'yahyasahaja/rn-todo' },
+    { github: 'rezzafr33/rn-expo' },
   ],
 }
