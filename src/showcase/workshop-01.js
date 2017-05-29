@@ -8,5 +8,6 @@ export default {
     { github: 'reyhansofian/expo-swapi-graphql' },
     { github: 'ekapasha17/learn-react' },
     { github: 'tituschristian/Todo-rn' },
+    { github: 'yahyasahaja/rn-todo' },
   ],
 }
