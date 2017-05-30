@@ -42,7 +42,7 @@ class App extends React.Component {
       <ApolloProvider client={client}>
         <Container fluid style={{ padding: '20px' }}>
           <Header as='h2' icon textAlign='center' style={{ marginTop: '30px' }}>
-            <Image src={devcLogo} style={{ width: '700px', right: '-100px' }} />
+            <Image src={devcLogo} style={{ width: '500px' }} />
             <Header.Content>
               Workshop Showcase
             </Header.Content>
