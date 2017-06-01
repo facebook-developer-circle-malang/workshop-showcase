@@ -11,5 +11,6 @@ export default {
     { github: 'yahyasahaja/rn-todo' },
     { github: 'rezzafr33/rn-expo' },
     { github: 'vjivandro/rn-expo' },
+    { github: 'mnindra/rn-todo' },
   ],
 }
