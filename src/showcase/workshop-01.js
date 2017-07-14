@@ -12,5 +12,6 @@ export default {
     { github: 'rezzafr33/rn-expo' },
     { github: 'vjivandro/rn-expo' },
     { github: 'mnindra/rn-todo' },
+    { github: 'gedeagas/react-native-travel-app' },
   ],
 }
